@@ -43,6 +43,15 @@ return {
             pickers = {
                 find_files = {
                     theme = 'dropdown',
+                    hidden = true, -- search hidden files
+                    no_ignore = false, -- still respect .gitignore
+                },
+                live_grep = {
+                    -- --hidden -> search hidden files
+                    -- --glob '!.git/*' -> exclude .git directory but nothing else
+                    additional_args = function(_)
+                        return { '--hidden', '--glob', '!.git/*' }
+                    end,
                 },
             },
         }
