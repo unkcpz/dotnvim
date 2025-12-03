@@ -18,7 +18,8 @@ If you can start nvim without seeing warnings then everything should be fine.
 You can then input `:checkhealth` in nvim to see if there are warnings that you need to fix.
 
 Now in your terminal run `nvim` to edit your file and enjoy it!
-(I recommend to have a look at [`alacritty`](https://alacritty.org/), and I recommend to use [`tmux`](https://github.com/tmux/tmux/wiki), the terminal multiplexer since the julia and python interpret require it to directly send the code to run as you have in julia notebook), 
+recommand to use kitty
+recommend to use [`tmux`](https://github.com/tmux/tmux/wiki), the terminal multiplexer since the julia and python interpret require it to directly send the code to run as you have in julia notebook 
 
 ## Pre-requirements
 
@@ -51,7 +52,7 @@ rm Meslo.zip
 fc-cache -fv
 ```
 
-Install https://github.com/nvim-tree/nvim-web-devicons for icons in the nvim-tree and bottom panes
+~~Install https://github.com/nvim-tree/nvim-web-devicons for icons in the nvim-tree and bottom panes~~
 
 Install lazygit:
 
