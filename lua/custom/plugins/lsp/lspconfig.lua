@@ -225,15 +225,13 @@ return {
         --     filetypes = { 'julia' },
         --     root_dir = lspconfig.util.root_pattern('.git', 'Project.toml'),
         -- }
-        --
-        -- -- nixls
-        -- vim.lsp.enable 'nixd'
-        -- vim.lsp.config('nixd', {
-        --     cmd = { 'nixd' },
-        --     filetypes = { 'nix' },
-        --     root_markers = { 'flake.nix', 'git' },
-        -- })
-
-        ---
+        
+        -- nixls
+        vim.lsp.enable 'nixd'
+        vim.lsp.config('nixd', {
+            cmd = { 'nixd' },
+            filetypes = { 'nix' },
+            root_markers = { 'flake.nix', 'git' },
+        })
     end,
 }

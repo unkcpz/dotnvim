@@ -36,12 +36,11 @@ The config requires:
 For `ruff` and `ruff-lsp` to work, need python `venv`.
 For `html` need npm (use node.js package version manager `nvm` to install it). ICF: `nvm.fish`.
 
-### more formatter
+### more formatter and lsp
 
 - `sudo pacman -S clang`
 - `sudo pacman -S ruby && gem install htmlbeautifier`
 - `sudo pacman -S yamlfmt`
-- `yay -S nixfmt`
 
 Require `ripgrep` for telescope fzf search.
 
