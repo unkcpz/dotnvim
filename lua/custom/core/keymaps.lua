@@ -69,3 +69,7 @@ keymap.set('n', '<leader>ww', toggle_wrap, { desc = 'toggle wrap lines' })
 
 -- Select and execute lua
 vim.keymap.set("v", "<leader>rl", ":'<,'>lua<CR>", { noremap = true, silent = true })
+
+-- Map Ctrl+S Ctrl+S to save
+vim.keymap.set('n', '<C-s><C-s>', ':w<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-s><C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
