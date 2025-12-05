@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 local keymap = vim.keymap -- for conciseness
 
 keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
+keymap.set('n', '<leader>hc', ':highlight clear<CR>', { desc = 'Disable colors' })
 
 -- delete single character without copying into register
 keymap.set('n', 'x', '"_x')
@@ -17,10 +18,10 @@ keymap.set('n', '<leader>sh', '<C-w>s', { desc = 'Split window horizontally' }) 
 keymap.set('n', '<leader>se', '<C-w>=', { desc = 'Make splits equal size' }) -- make split windows equal width & height
 keymap.set('n', '<leader>sx', '<cmd>close<CR>', { desc = 'Close current split' }) -- close current split window
 
-keymap.set('n', '<leader>s+', ':resize +5<CR>', { desc = "Increase window height" })
-keymap.set('n', '<leader>s-', ':resize -5<CR>', { desc = "Decrease window height" })
-keymap.set('n', '<leader>s>', ':vertical resize +5<CR>', { desc = "Increase window width" })
-keymap.set('n', '<leader>s<', ':vertical resize -5<CR>', { desc = "Decrease window width" })
+keymap.set('n', '<leader>s+', ':resize +5<CR>', { desc = 'Increase window height' })
+keymap.set('n', '<leader>s-', ':resize -5<CR>', { desc = 'Decrease window height' })
+keymap.set('n', '<leader>s>', ':vertical resize +5<CR>', { desc = 'Increase window width' })
+keymap.set('n', '<leader>s<', ':vertical resize -5<CR>', { desc = 'Decrease window width' })
 
 keymap.set('n', '<leader>to', '<cmd>tabnew<CR>', { desc = 'Open new tab' }) -- open new tab
 keymap.set('n', '<leader>tx', '<cmd>tabclose<CR>', { desc = 'Close current tab' }) -- close current tab
@@ -68,8 +69,8 @@ end
 keymap.set('n', '<leader>ww', toggle_wrap, { desc = 'toggle wrap lines' })
 
 -- Select and execute lua
-vim.keymap.set("v", "<leader>rl", ":'<,'>lua<CR>", { noremap = true, silent = true })
+keymap.set('v', '<leader>rl', ":'<,'>lua<CR>", { noremap = true, silent = true })
 
 -- Map Ctrl+S Ctrl+S to save
-vim.keymap.set('n', '<C-s><C-s>', ':w<CR>', { noremap = true, silent = true })
-vim.keymap.set('i', '<C-s><C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
+keymap.set('n', '<C-s><C-s>', ':w<CR>', { noremap = true, silent = true })
+keymap.set('i', '<C-s><C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
