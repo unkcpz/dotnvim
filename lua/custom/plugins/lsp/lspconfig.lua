@@ -160,6 +160,30 @@ return {
             end,
         })
 
+        -- JavaScript / TypeScript / React
+        vim.lsp.config('vtsls', {})
+
+        vim.lsp.config('tailwindcss', {
+            on_attach = on_attach,
+            capabilities = capabilities,
+        })
+
+        -- ESLint
+        local base_on_attach = vim.lsp.config.eslint.on_attach
+        vim.lsp.config('eslint', {
+            on_attach = function(client, bufnr)
+                if not base_on_attach then
+                    return
+                end
+
+                base_on_attach(client, bufnr)
+                vim.api.nvim_create_autocmd('BufWritePre', {
+                    buffer = bufnr,
+                    command = 'LspEslintFixAll',
+                })
+            end,
+        })
+
         -- -- import lspconfig plugin
         -- local lspconfig = vim.lsp.config
         --
@@ -225,7 +249,7 @@ return {
         --     filetypes = { 'julia' },
         --     root_dir = lspconfig.util.root_pattern('.git', 'Project.toml'),
         -- }
-        
+
         -- nixls
         vim.lsp.enable 'nixd'
         vim.lsp.config('nixd', {

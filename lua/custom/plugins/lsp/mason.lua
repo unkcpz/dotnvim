@@ -38,6 +38,9 @@ return {
                 'basedpyright',
                 'markdown_oxide',
                 'denols',
+                'vtsls',
+                'eslint',
+                'tailwindcss',
             },
             automatic_installation = true,
         }
