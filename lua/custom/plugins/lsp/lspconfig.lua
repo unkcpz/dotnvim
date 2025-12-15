@@ -184,6 +184,9 @@ return {
             end,
         })
 
+        -- protobuf lsp
+        vim.lsp.config('protols', {})
+
         -- -- import lspconfig plugin
         -- local lspconfig = vim.lsp.config
         --

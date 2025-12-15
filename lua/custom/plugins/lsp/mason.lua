@@ -41,6 +41,7 @@ return {
                 'vtsls',
                 'eslint',
                 'tailwindcss',
+                'protols',
             },
             automatic_installation = true,
         }
