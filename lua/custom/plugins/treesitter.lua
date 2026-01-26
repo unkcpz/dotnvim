@@ -58,29 +58,20 @@ return {
                     node_decremental = '<bs>',
                 },
             },
-            vim.api.nvim_create_autocmd('FileType', {
-                pattern = { 'lua', 'julia' },
-                callback = function()
-                    vim.bo.shiftwidth = 4
-                    vim.bo.tabstop = 4
-                    vim.bo.expandtab = true -- Replace tabs with spaces
-                end,
-            }),
-            -- Set syntax highlight to lalrpop
-            vim.filetype.add {
-                extension = {
-                    lalrpop = 'lalrpop',
-                },
-            },
-
-            vim.api.nvim_create_autocmd('FileType', {
-                pattern = 'lalrpop',
-                callback = function()
-                    vim.cmd 'set syntax=rust'
-                end,
-            }),
-
-            vim.treesitter.language.register('rust', 'lalrpop'),
+            -- -- Set syntax highlight to lalrpop
+            -- vim.filetype.add {
+            --     extension = {
+            --         lalrpop = 'lalrpop',
+            --     },
+            -- },
+            --
+            -- vim.api.nvim_create_autocmd('FileType', {
+            --     pattern = 'lalrpop',
+            --     callback = function()
+            --         vim.cmd 'set syntax=rust'
+            --     end,
+            -- }),
+            -- vim.treesitter.language.register('rust', 'lalrpop'),
         }
     end,
 }
