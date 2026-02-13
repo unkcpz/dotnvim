@@ -38,6 +38,7 @@ return {
                 'basedpyright',
                 'markdown_oxide',
                 'denols',
+                'gopls',
                 'vtsls',
                 'eslint',
                 'tailwindcss',

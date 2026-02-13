@@ -37,6 +37,7 @@ return {
                 html = { 'htmlbeautifier' },
                 eml = { 'htmlbeautifier' },
                 cpp = { 'clang_format' },
+                go = { 'gofmt' },
                 c = { 'clang_format' },
                 nix = { 'nixfmt' },
             },
