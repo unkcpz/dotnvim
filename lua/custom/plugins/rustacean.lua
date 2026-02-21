@@ -6,7 +6,8 @@ return {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
     },
-    version = '^4',
+    version = '^8',
+    lazy = false,
     ft = { 'rust', 'lalrpop', 'rs' },
     tools = {
         float_win_config = {
@@ -59,22 +60,23 @@ return {
                                 },
                             },
                             -- Add clippy lints for Rust.
-                            checkOnSave = {
+                            checkOnSave = true,
+                            check = {
                                 allFeatures = true,
                                 command = 'clippy',
                                 extraArgs = {
                                     '--',
                                     '--no-deps',
-                                    '-Dclippy::correctness',
-                                    '-Dclippy::complexity',
-                                    '-Wclippy::perf',
-                                    '-Wclippy::pedantic',
+                                    -- '-Dclippy::correctness',
+                                    -- '-Dclippy::complexity',
+                                    -- '-Wclippy::perf',
+                                    -- '-Wclippy::pedantic',
                                 },
                             },
                             procMacro = {
                                 enable = true,
                                 ignored = {
-                                    ['async-trait'] = vim.NIL,
+                                    ['async-trait'] = { 'async_trait' },
                                     ['napi-derive'] = { 'napi' },
                                     ['async-recursion'] = { 'async_recursion' },
                                 },
