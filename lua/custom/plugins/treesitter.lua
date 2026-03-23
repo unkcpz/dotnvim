@@ -32,6 +32,7 @@ return {
                 'json',
                 'javascript',
                 'typescript',
+                'hurl',
                 'tsx',
                 'yaml',
                 'html',
