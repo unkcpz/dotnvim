@@ -177,10 +177,6 @@ return {
                 end
 
                 base_on_attach(client, bufnr)
-                vim.api.nvim_create_autocmd('BufWritePre', {
-                    buffer = bufnr,
-                    command = 'LspEslintFixAll',
-                })
             end,
         })
 

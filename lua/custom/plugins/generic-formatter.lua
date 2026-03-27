@@ -29,8 +29,12 @@ return {
                     end
                 end,
                 rust = { 'rustfmt', lsp_format = 'fallback' },
-                typescript = { 'deno_fmt' },
-                javascript = { 'deno_fmt' },
+                -- typescript = { 'deno_fmt' },
+                -- javascript = { 'deno_fmt' },
+                typescript = { 'eslint_d' },
+                javascript = { 'eslint_d' },
+                typescriptreact = { 'eslint_d' },
+                javascriptreact = { 'eslint_d' },
                 css = { 'deno_fmt' },
                 -- Use "yamlfmt" as primary
                 yaml = { 'yamlfmt' },
