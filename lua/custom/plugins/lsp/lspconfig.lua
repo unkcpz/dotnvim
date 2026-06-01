@@ -256,5 +256,28 @@ return {
             filetypes = { 'nix' },
             root_markers = { 'flake.nix', 'git' },
         })
+
+        -- odin use ols
+        vim.lsp.enable 'ols'
+        vim.lsp.config('ols', {
+            cmd = { vim.fn.expand '$HOME/odin/ols/ols' },
+            filetypes = { 'odin' },
+            settings = {
+                odin_command = vim.fn.expand '$HOME/odin/Odin/odin',
+            },
+            init_options = {
+                checker_args = '-strict-style',
+                collections = {
+                    { name = 'core', path = vim.fn.expand '$HOME/odin/Odin/core' },
+                    { name = 'vendor', path = vim.fn.expand '$HOME/odin/Odin/vendor' },
+                    { name = 'shared', path = vim.fn.expand '$HOME/odin/odin-lib' },
+                    { name = 'src', path = 'src' },
+                },
+                enable_inlay_hints_params = true,
+                enable_inlay_hints_default_params = true,
+                enable_inlay_hints_implicit_return = true,
+                enable_semantic_tokens = true,
+            },
+        })
     end,
 }

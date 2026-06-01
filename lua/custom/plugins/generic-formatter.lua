@@ -14,6 +14,11 @@ return {
                 args = { '--assume-filename', '$FILENAME', '--style=Google' },
                 stdin = true,
             },
+            odinfmt = {
+                command = vim.fn.expand '$HOME/odin/ols/odinfmt',
+                args = { '-stdin' },
+                stdin = true,
+            },
         }
 
         require('conform').setup {
@@ -44,6 +49,7 @@ return {
                 go = { 'gofmt' },
                 c = { 'clang_format' },
                 nix = { 'nixfmt' },
+                odin = { 'odinfmt' },
             },
         }
         -- This in order to make html formatter works for .eml
