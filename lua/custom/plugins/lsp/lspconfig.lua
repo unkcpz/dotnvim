@@ -279,5 +279,32 @@ return {
                 enable_semantic_tokens = true,
             },
         })
+
+        -- C/C++ using clangd
+        vim.lsp.enable 'clangd'
+
+        vim.lsp.config('clangd', {
+            cmd = {
+                'clangd',
+                '--background-index',
+                '--completion-style=detailed',
+                '--header-insertion=never',
+                '--all-scopes-completion',
+            },
+            filetypes = { 'c', 'cpp' },
+
+            settings = {
+                clangd = {
+                    -- enables more detailed completions
+                    completion = {
+                        detailedLabel = true,
+                    },
+                },
+            },
+
+            init_options = {
+                clangdFileStatus = true, -- useful info in statusline
+            },
+        })
     end,
 }

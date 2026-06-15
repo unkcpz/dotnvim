@@ -11,7 +11,11 @@ return {
             },
             clang_format = {
                 command = 'clang-format',
-                args = { '--assume-filename', '$FILENAME', '--style=Google' },
+                args = {
+                    '--assume-filename',
+                    '$FILENAME',
+                    '--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Allman}',
+                },
                 stdin = true,
             },
             odinfmt = {
