@@ -271,7 +271,7 @@ return {
                     { name = 'core', path = vim.fn.expand '$HOME/odin/Odin/core' },
                     { name = 'vendor', path = vim.fn.expand '$HOME/odin/Odin/vendor' },
                     { name = 'shared', path = vim.fn.expand '$HOME/odin/odin-lib' },
-                    { name = 'src', path = '.' },
+                    { name = 'src', path = './src' },
                 },
                 enable_inlay_hints_params = true,
                 enable_inlay_hints_default_params = true,
