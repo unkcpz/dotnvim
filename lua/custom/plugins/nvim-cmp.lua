@@ -27,6 +27,7 @@ return {
 
         cmp.setup {
             completion = {
+                autocomplete = false,
                 completeopt = 'menu,menuone,preview,noselect',
             },
             snippet = { -- configure how nvim-cmp interacts with snippet engine
@@ -36,7 +37,14 @@ return {
             },
             mapping = cmp.mapping.preset.insert {
                 ['<C-k>'] = cmp.mapping.select_prev_item(), -- previous suggestion
-                ['<C-j>'] = cmp.mapping.select_next_item(), -- next suggestion
+                -- only trigger the auto-complete when press C-j
+                ['<C-j>'] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        cmp.select_next_item()
+                    else
+                        cmp.complete()
+                    end
+                end, { 'i', 's' }),
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-Space>'] = cmp.mapping.complete(), -- show completion suggestions
