@@ -20,7 +20,10 @@ return {
             },
             odinfmt = {
                 command = vim.fn.expand '$HOME/odin/ols/odinfmt',
-                args = { '-stdin' },
+                args = {
+                    '-stdin',
+                    '-config:' .. vim.fn.expand '$HOME/.config/odinfmt.json',
+                },
                 stdin = true,
             },
         }
