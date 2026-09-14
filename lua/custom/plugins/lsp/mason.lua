@@ -46,6 +46,17 @@ return {
             },
             automatic_installation = true,
         }
+        vim.lsp.config('ocamllsp', {
+            cmd = { 'ocamllsp' },
+            filetypes = { 'ocaml', 'ocamlinterface' },
+            root_markers = {
+                'dune-project',
+                'dune-workspace',
+                '.git',
+            },
+        })
+        vim.lsp.enable 'ocamllsp'
+
         vim.lsp.config('lua_ls', {
             capabilities = capabilities,
             settings = {

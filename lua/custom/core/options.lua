@@ -54,3 +54,6 @@ opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.foldlevel = 99
 
+-- runtimepath
+-- for ocaml merlin
+vim.opt.runtimepath:append(vim.fn.expand("/home/jyu/.opam/4.14.4/share/merlin/vim"))

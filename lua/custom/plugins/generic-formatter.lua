@@ -59,6 +59,7 @@ return {
                 c = { 'clang_format' },
                 nix = { 'nixfmt' },
                 odin = { 'odinfmt' },
+                ocaml = { 'ocamlformat' },
             },
         }
         -- This in order to make html formatter works for .eml
