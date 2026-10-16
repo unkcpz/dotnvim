@@ -74,3 +74,8 @@ keymap.set('v', '<leader>rl', ":'<,'>lua<CR>", { noremap = true, silent = true }
 -- Map Ctrl+S Ctrl+S to save
 keymap.set('n', '<C-s><C-s>', ':w<CR>', { noremap = true, silent = true })
 keymap.set('i', '<C-s><C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
+
+-- stop and restart Lsp
+vim.keymap.set("n", "<leader>llr", "<cmd>LspStart rust_analyzer<CR>", { desc = "Rust LSP launch" })
+vim.keymap.set("n", "<leader>ls", "<cmd>LspStop<CR>", { desc = "LSP Stop" })
+vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = "LSP Restart" })
