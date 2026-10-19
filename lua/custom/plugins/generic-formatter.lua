@@ -14,7 +14,7 @@ return {
                 args = {
                     '--assume-filename',
                     '$FILENAME',
-                    '--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Allman, PointerAlignment: Right, ColumnLimit: 0, SkipMacroDefinitionBody: true}',
+                    '--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Allman, PointerAlignment: Right, ColumnLimit: 0, SkipMacroDefinitionBody: true, AlwaysBreakAfterReturnType: All}',
                 },
                 stdin = true,
             },
