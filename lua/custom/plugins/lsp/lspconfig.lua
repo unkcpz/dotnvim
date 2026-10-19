@@ -290,6 +290,8 @@ return {
                 '--completion-style=detailed',
                 '--header-insertion=never',
                 '--all-scopes-completion',
+                -- to get func for libs from nix
+                '--query-driver=/nix/store/*-clang-wrapper-*/bin/clang',
             },
             filetypes = { 'c', 'cpp' },
 
