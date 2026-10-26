@@ -14,7 +14,8 @@ return {
                 args = {
                     '--assume-filename',
                     '$FILENAME',
-                    '--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Allman, PointerAlignment: Right, ColumnLimit: 0, SkipMacroDefinitionBody: true, AlwaysBreakAfterReturnType: All}',
+                    '--style={BasedOnStyle: Google, IndentWidth: 4, BreakBeforeBraces: Allman, PointerAlignment: Right, ColumnLimit: 0, SkipMacroDefinitionBody: true, AlwaysBreakAfterReturnType: All, IndentCaseLabels: false}',
+                    '--style={BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0, PointerAlignment: Right, SkipMacroDefinitionBody: true, AlwaysBreakAfterReturnType: All, IndentCaseLabels: false, BreakBeforeBraces: Custom, BraceWrapping: {AfterCaseLabel: true, AfterClass: true, AfterControlStatement: true, AfterEnum: true, AfterFunction: true, AfterNamespace: true, AfterStruct: true, AfterUnion: true, AfterExternBlock: true, BeforeElse: false, BeforeCatch: true}}',
                 },
                 stdin = true,
             },

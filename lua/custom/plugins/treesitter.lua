@@ -18,7 +18,9 @@ return {
             },
             indent = {
                 enable = true,
-                disable = { 'markdown' }, -- Tree-sitter indent can be weird for md
+                -- Tree-sitter indent can be weird for md
+                -- c as well
+                disable = { 'markdown', 'c' },
             },
             -- enable autotagging (w/ nvim-ts-autotag plugin)
             autotag = {
