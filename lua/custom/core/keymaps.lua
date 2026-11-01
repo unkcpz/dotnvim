@@ -79,3 +79,7 @@ keymap.set('i', '<C-s><C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>llr", "<cmd>LspStart rust_analyzer<CR>", { desc = "Rust LSP launch" })
 vim.keymap.set("n", "<leader>ls", "<cmd>LspStop<CR>", { desc = "LSP Stop" })
 vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = "LSP Restart" })
+
+-- c-h / c-l to bs and del
+vim.keymap.set("i", "<C-h>", "<BS>", { desc = "Backspace" })
+vim.keymap.set("i", "<C-l>", "<Del>", { desc = "Del" })
