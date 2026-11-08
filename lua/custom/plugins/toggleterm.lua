@@ -20,7 +20,7 @@ return {
                 local count = vim.v.count1
                 local cwd = vim.fn.getcwd()
                 local toggleterm = require 'toggleterm'
-                toggleterm.toggle(count, 128, cwd, 'vertical')
+                toggleterm.toggle(count, 100, cwd, 'vertical')
             end,
             desc = 'Open a vertical terminal on cwd',
         },
