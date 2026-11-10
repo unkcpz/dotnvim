@@ -19,14 +19,14 @@ return {
                 },
                 stdin = true,
             },
-            odinfmt = {
-                command = vim.fn.expand '$HOME/odin/ols/odinfmt',
-                args = {
-                    '-stdin',
-                    '-config:' .. vim.fn.expand '$HOME/.config/odinfmt.json',
-                },
-                stdin = true,
-            },
+            -- odinfmt = {
+            --     command = vim.fn.expand '$HOME/odin/ols/odinfmt',
+            --     args = {
+            --         '-stdin',
+            --         '-config:' .. vim.fn.expand '$HOME/.config/odinfmt.json',
+            --     },
+            --     stdin = true,
+            -- },
         }
 
         require('conform').setup {
@@ -59,7 +59,7 @@ return {
                 go = { 'gofmt' },
                 c = { 'clang_format' },
                 nix = { 'nixfmt' },
-                odin = { 'odinfmt' },
+                -- odin = { 'odinfmt' },
                 ocaml = { 'ocamlformat' },
             },
         }
