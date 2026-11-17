@@ -16,6 +16,14 @@ return {
             todo_comments.jump_prev()
         end, { desc = 'Previous todo comment' })
 
-        todo_comments.setup()
+        todo_comments.setup {
+            highlight = {
+                -- allow an optional (name) after the keyword: TODO(name):
+                pattern = [[.*<((KEYWORDS)%(\(.{-1,}\))?):]],
+            },
+            search = {
+                pattern = [[\b(KEYWORDS)(\([^\)]*\))?:]],
+            },
+        }
     end,
 }
